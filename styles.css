@@ -1,0 +1,88 @@
+body {
+    padding: 0;
+    margin: 5rem 0 0 0;
+}
+
+h1 {
+    font-family: DM Sans, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    color: #374151;
+    height: 80vh;
+    background-image: url(https://www.cotiss.com/hubfs/raw_assets/public/@marketplace/kalungi_com/Atlas_Pro_SaaS_Website_Theme/images/Hero-Background.svg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+p {
+    font-family: DM Sans, sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+textarea {
+    width: 21.5rem;
+    resize: none;
+    font-size: 0.8rem;
+    font-family: DM Sans, sans-serif;
+    padding: 0.5rem;
+    border: solid 1px #f1f4f9;
+    outline-color: #f1f4f9;
+    color: 374151;
+    border-radius: 4px;
+}
+
+textarea:hover {
+    background-color: #f1f4f9;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline-color: #05ca86 !important;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: #05ca86;
+    border: 1px solid #05ca86;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: DM Sans, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: .03em;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0.55rem 1rem 0.5rem 1rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    width: auto;
+    word-break: break-word;
+}
+
+button:hover {
+    background-color: #048d5e;
+    border-color: #048d5e;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}

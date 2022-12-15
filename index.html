@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Feedback</title>
+    <script>
+        async function fetchData() {
+            const response = await fetch("https://iddtfurd0d.execute-api.ap-southeast-2.amazonaws.com/Initial");
+            const data = await response.json();
+
+            const { FeedbackText } = data;
+
+            document.getElementById("quote").textContent = FeedbackText;
+        }
+
+        fetchData();
+
+        function submitData() {
+            var feedbackMessage = document.getElementById('feedback')
+            var messageError = document.getElementById('error')
+            var successMessage = document.getElementById('success')
+
+            if (feedbackMessage.value.length == 0) {
+                messageError.innerHTML = 'Feedback cannot be empty'
+                return false;
+            } else {
+                messageError.innerHTML = '&nbsp;'
+                console.log(feedbackMessage.value)
+            }
+
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({ "feedback": feedbackMessage.value })
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://6uag104zl7.execute-api.ap-southeast-2.amazonaws.com/Deployment2", requestOptions)
+                .then(response => response.text())
+                .then(document.getElementById("quote").textContent = feedbackMessage.value)
+                .then(feedbackMessage.value = '')
+                .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+
+<style>
+    body {
+        padding: 0;
+        margin: 5rem 0 0 0;
+    }
+
+    h1 {
+        font-family: DM Sans, sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        color: #374151;
+        height: 80vh;
+        background-image: url(https://www.cotiss.com/hubfs/raw_assets/public/@marketplace/kalungi_com/Atlas_Pro_SaaS_Website_Theme/images/Hero-Background.svg) !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    q {
+        font-family: DM Sans, sans-serif;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+    }
+
+    textarea {
+        cursor: text;
+        width: 22rem;
+        resize: none;
+        font-size: 0.8rem;
+        font-family: DM Sans, sans-serif;
+        padding: 0.5rem;
+        border: solid 1px #f1f4f9;
+        outline-color: #f1f4f9;
+        color: 374151;
+        border-radius: 4px;
+    }
+
+    textarea:hover {
+        background-color: #f1f4f9;
+        transition: all 0.3s ease;
+    }
+
+    textarea:focus {
+        outline-color: #05ca86 !important;
+        transition: all 0.3s ease;
+    }
+
+    button {
+        background-color: #05ca86;
+        border: 1px solid #05ca86;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: DM Sans, sans-serif;
+        font-size: .75rem;
+        font-weight: 700;
+        height: auto;
+        letter-spacing: .03em;
+        line-height: 1.1;
+        margin-top: 0.5remrem;
+        padding: 0.55rem 1rem 0.5rem 1rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        white-space: normal;
+        width: auto;
+        word-break: break-word;
+    }
+
+    button:hover {
+        background-color: #048d5e;
+        border-color: #048d5e;
+        color: #fff;
+        text-decoration: none;
+        transform: scale(1);
+        transition: all 0.3s ease;
+    }
+
+    .quote {
+        width: 40rem;
+    }
+
+    .error {
+        font-family: DM Sans, sans-serif;
+        font-size: 0.8rem;
+        color: #cc0c0c;
+        margin: 0.5rem 0 0.8rem;
+        border-radius: 0.1rem;
+        text-align: center;
+        width: 22rem;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="quote">
+            <q id="quote"></q>
+        </div>
+        <br>
+        <textarea id="feedback" cols="30" rows="10" placeholder="Enter your feedback here" class="input"></textarea>
+        <p id="error" class="error">&nbsp;</p>
+
+        <button type="submit" onclick="submitData()">Submit</button>
+    </div>
+</body>
+
+</html>
