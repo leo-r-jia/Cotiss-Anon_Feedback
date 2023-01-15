@@ -19,6 +19,9 @@
     <li>
       <a href="#product-objectives">Product Objectives</a>
     </li>
+    <li>
+      <a href="#first-iteration">First Iteration</a>
+    </li>
   </ol>
 </details>
   
@@ -36,3 +39,10 @@ The UX design is simple; a random piece of feedback displayed on each page load,
 The simple honest anonymous feedback site encourages Cotiss employees to submit honest feedback. User interactions should be straight-forward: type feedback into the input text field, and click the submit button.
 <br><br>
 This documentation should help admins manage the website and know how to access and read the reviews submitted by employees.
+
+## First Iteration
+
+<b>Web Hosting</b>
+Created a simple HTML/CSS page that met the requirements of the project - text for random piece of feedback generated on each load, text area for users to input their feedback, and a submit button to submit the feedback - however purely visual. No JavaScript had been added at this point, the main purpose of the simple site at this point was to ensure web hosting worked properly.
+<br><br>
+For web hosting, an EC2 virtual machine (VM) was deployed
