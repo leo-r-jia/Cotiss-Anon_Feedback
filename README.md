@@ -17,11 +17,7 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#product-objectives">Product Objectives</a>
     </li>
   </ol>
 </details>
@@ -35,7 +31,7 @@ As Cotiss has grown over the years, the need for collecting feedback internally 
 <br><br>
 The UX design is simple; a random piece of feedback displayed on each page load, and a box at the bottom of the page with a submit button to add new feedback to the feedback bank. 
 
-##Product Overview and Objectives
+##Product Objectives
 
 The simple honest anonymous feedback site encourages Cotiss employees to submit honest feedback. User interactions should be straight-forward: type feedback into the input text field, and click the submit button.
 <br><br>
