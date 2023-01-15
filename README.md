@@ -3,7 +3,7 @@
 <p>
   <a href="https://youtu.be/QcGtofB6Nl8">View Demo Video</a>
   ·
-  <a href="www.cotiss-anon-feedback.com">Website</a>
+  <a href="https://www.cotiss-anon-feedback.com">Website</a>
 <p>
 
 <!-- TABLE OF CONTENTS -->
@@ -12,9 +12,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -27,3 +24,11 @@
 </details>
   
 ## About The Project
+<h3>The Client<h3>
+  
+Cotiss is built specifically to help organisations be more effective in how they buy & supply goods and services. They’re a B2B company that creates software for companies to track their spending and make better business decisions. 
+
+  <h3>The Project<h3>
+    As Cotiss has grown over the years, the need for collecting feedback internally and externally has become a more prominent issue. Cotiss leadership is looking for a simple website where employees can anonymously submit feedback. To encourage employees to share honestly, they want a randomly selected piece of existing feedback to be displayed on the site on each page load. 
+
+The UX design is simple; a random piece of feedback displayed on each page load, and a box at the bottom of the page with a submit button to add new feedback to the feedback bank. 
