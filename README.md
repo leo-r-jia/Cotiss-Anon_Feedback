@@ -5,6 +5,9 @@
   ·
   <a href="https://www.cotiss-anon-feedback.com">Website</a>
 <p>
+  
+  ![image](https://user-images.githubusercontent.com/105583042/212533326-64bc3baf-ee2e-49c0-b685-6c111a37de81.png)
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
