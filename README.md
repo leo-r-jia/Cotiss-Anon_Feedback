@@ -14,7 +14,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the Project</a>
     </li>
     <li>
       <a href="#product-objectives">Product Objectives</a>
@@ -24,12 +24,20 @@
       <ul>
         <li><a href="#web-hosting">Web Hosting</a></li>
         <li><a href="#auto-scaling">Auto Scaling</a></li>
+        <li><a href="#domain-registration">Domain Registration</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#second-iteration">Second Iteration</a>
+      <ul>
+        <li><a href="#external-data">External Data</a></li>
+        <li><a href="#micro-services-and-apis">Micro Services and APIs</a></li>
       </ul>
     </li>
   </ol>
 </details>
   
-## About The Project
+## About the Project
 <h3>The Client</h3>
 Cotiss is built specifically to help organisations be more effective in how they buy & supply goods and services. They’re a B2B company that creates software for companies to track their spending and make better business decisions. 
 
@@ -87,6 +95,10 @@ When the EC2 instance was set up, an apache web server was installed onto the VM
 
 Once the HTML page was viewable from the EC2 instance via a browser, an Amazon Machine Image was created from the virtual machine. This was then put into an auto scaling group so that one virtual machine always exists. There were a minimum of 1 virtual machine running at all times, a maximum of 2, and 2 running at a single time preferred, and each one in a different availability zone. An Elastic Load Balancer was put in front of the virtual machines to load balance between two availability zones. This modelled an active/active multi-region architecture.
 
-## Domain Registration
+### Domain Registration
 
-Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was registered using Route53. Certificates were created using AWS Certificate Manager for domains cotiss-anon-feedback.com and www.cotiss-anon-feedback.com. All traffic to the domain was redirected to the Load Balancer, which would balance inbound traffic to the two instances.
+Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was registered using Route53. Certificates were created using AWS Certificate Manager for domains `cotiss-anon-feedback.com` and `www.cotiss-anon-feedback.com`. All traffic to the domain was redirected to the Load Balancer, which would balance inbound traffic to the two instances.
+
+## Second Iteration
+
+### External Data
