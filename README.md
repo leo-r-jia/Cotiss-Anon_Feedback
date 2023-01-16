@@ -47,6 +47,30 @@ This documentation should help admins manage the website and know how to access 
 
 ### Web Hosting
 Created a simple HTML/CSS page that met the requirements of the project - text for random piece of feedback generated on each load, text area for users to input their feedback, and a submit button to submit the feedback - however purely visual. At this point, no JavaScript had been added and the main purpose of the simple site was to ensure web hosting worked properly.
+
+```html
+   <html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Anonymous Feedback</title>
+</head>
+​
+<body>
+    <div class="container">
+        <h1>Anonymous Feedback</h1>
+        <p>"Some quote... <br>Second line "</p>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your feedback here" class="input"></textarea>
+        <button>Submit</button>
+    </div>
+</body>
+​
+</html>
+   ```
+
 <br>
 ![image](https://user-images.githubusercontent.com/105583042/212621301-9207ba7d-6998-4505-9682-055e0a2ffab5.png)
 <br>
