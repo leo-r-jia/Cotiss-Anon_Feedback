@@ -43,6 +43,7 @@ This documentation should help admins manage the website and know how to access 
 ## First Iteration
 
 <b>Web Hosting</b>
-Created a simple HTML/CSS page that met the requirements of the project - text for random piece of feedback generated on each load, text area for users to input their feedback, and a submit button to submit the feedback - however purely visual. No JavaScript had been added at this point, the main purpose of the simple site at this point was to ensure web hosting worked properly.
+Created a simple HTML/CSS page that met the requirements of the project - text for random piece of feedback generated on each load, text area for users to input their feedback, and a submit button to submit the feedback - however purely visual. At this point, no JavaScript had been added and the main purpose of the simple site was to ensure web hosting worked properly.
 <br><br>
-For web hosting, an EC2 virtual machine (VM) was deployed
+For web hosting, an EC2 virtual machine (VM) was deployed. The operating system used for the VM was Amazon Linux AMI, SSD Volume Type; the instance type of this VM was t2 micro.
+<br><br>
