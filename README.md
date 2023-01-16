@@ -73,7 +73,9 @@ Created a simple HTML/CSS page that met the requirements of the project - text f
    ```
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/105583042/212622208-f0da670d-8e9f-4dd6-9263-7d9b5fa2c525.png)
+
 <br>
 For web hosting, an Amazon EC2 virtual machine (VM) was deployed. The operating system used for the VM was Amazon Linux AMI, SSD Volume Type; the instance type of this VM was t2 micro. A security group was configured to allow two types of inbound traffic - SSH (to log in to the virtual computer) and HTTP (to view the webpage from a browser).
 
