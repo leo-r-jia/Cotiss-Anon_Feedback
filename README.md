@@ -93,7 +93,7 @@ When the EC2 instance was set up, an apache web server was installed onto the VM
 
 Once the HTML page was viewable from the EC2 instance via a browser, an Amazon Machine Image was created from the virtual machine. This was then put into an auto scaling group so that one virtual machine always exists. There were a minimum of 1 virtual machine running at all times, a maximum of 2, and 2 running at a single time preferred, and each one in a different availability zone. An Elastic Load Balancer was put in front of the virtual machines to load balance between two availability zones. This modelled an active/active multi-region architecture, pictured below.
 
-![activeactive](https://user-images.githubusercontent.com/105583042/212634092-d9c13816-d8d5-458b-a026-9ca406797494.PNG | width=400)
+![activeactive](https://user-images.githubusercontent.com/105583042/212634092-d9c13816-d8d5-458b-a026-9ca406797494.PNG | width=400 )
 
 
 ### Domain Registration
