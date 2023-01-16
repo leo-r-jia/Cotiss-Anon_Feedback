@@ -86,9 +86,7 @@ Created a simple HTML/CSS page that met the requirements of the project - text f
 
 <br>
 For web hosting, an Amazon EC2 virtual machine (VM) was deployed. The operating system used for the VM was Amazon Linux AMI, SSD Volume Type; the instance type of this VM was t2 micro. A security group was configured to allow two types of inbound traffic - SSH (to log in to the virtual computer) and HTTP (to view the webpage from a browser).
-
 <br><br>
-
 When the EC2 instance was set up, an apache web server was installed onto the VM and the HTML file was linked to be served by the apache web server.
 
 ### Auto Scaling
