@@ -32,6 +32,7 @@
       <ul>
         <li><a href="#external-data">External Data</a></li>
         <li><a href="#micro-services-and-apis">Micro Services and APIs</a></li>
+        <li><a href="#web-hosting">Web Hosting Platform-as-a-Service</a></li>
       </ul>
     </li>
   </ol>
@@ -93,7 +94,7 @@ When the EC2 instance was set up, an apache web server was installed onto the VM
 
 Once the HTML page was viewable from the EC2 instance via a browser, an Amazon Machine Image was created from the virtual machine. This was then put into an auto scaling group so that one virtual machine always exists. There were a minimum of 1 virtual machine running at all times, a maximum of 2, and 2 running at a single time preferred, and each one in a different availability zone. An Elastic Load Balancer was put in front of the virtual machines to load balance between two availability zones. This modelled an active/active multi-region architecture, pictured below.
 
-![activeactive](https://user-images.githubusercontent.com/105583042/212634092-d9c13816-d8d5-458b-a026-9ca406797494.PNG | width=400 )
+![activeactive](https://user-images.githubusercontent.com/105583042/212634092-d9c13816-d8d5-458b-a026-9ca406797494.PNG)
 
 
 ### Domain Registration
@@ -105,3 +106,13 @@ Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was regis
 ### External Data
 
 To store the feedback submitted by users, a DynamoDB table was created. 
+
+### Micro Services and APIs
+
+The architecture: Website calls API Gateway which executes a Lambda Function which reads/updates data in the DynamoDB table. With the help of JavaScript, the HTML site was transformed into a dynamic site. 
+<br><br>
+Firstly, a Lambda function was created that retrieved an item from the DynamoDB table created earlier. This was achieved through IAM roles and Python. A GET REST API was created using API Gateway that invoked the Lambda function when called. Using JavaScript, the website would call the API with every reload of the page and display the retrieved piece of feedback on the website.
+<br><br>
+Secondly, a Lambda function was created that stored the feedback text, from the text field on the website to the Lambda table. Again, this was achieved through IAM roles and Python. A POST REST API was created using API Gateway that invoked the Lambda function when called. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API would be called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
+
+### Web Hosting Platform-as-a-Service
