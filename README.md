@@ -48,7 +48,7 @@ The UX design is simple; a random piece of feedback displayed on each page load,
 
 ## Product Objectives
 
-The simple honest anonymous feedback site encourages Cotiss employees to submit honest feedback. User interactions should be straight-forward: type feedback into the input text field, and click the submit button.
+The simple honest anonymous feedback site encourages Cotiss employees to submit honest feedback. User interactions should be straight-forward: type feedback into the input text field, and click the submit button. Each feedback submitted should be stored into a feedback bank, which will be accessed on each site reload to pick a random piece of feedback to display on the site.
 <br><br>
 This documentation should help admins manage the website and know how to access and read the reviews submitted by employees.
 
