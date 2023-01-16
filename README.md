@@ -32,9 +32,18 @@
       <ul>
         <li><a href="#external-data">External Data</a></li>
         <li><a href="#micro-services-and-apis">Micro Services and APIs</a></li>
+        <li><a href="#web-hosting-platform-as-a-service">Web Hosting Platform-as-a-Service</a></li>
+      </ul>
+    </li>
+        <li>
+      <a href="#final-iteration">Final Iteration</a>
+      <ul>
+        <li><a href="#amplify-hosting">Amplify Hosting</a></li>
+        <li><a href="#micro-services-and-apis">Micro Services and APIs</a></li>
         <li><a href="#web-hosting">Web Hosting Platform-as-a-Service</a></li>
       </ul>
     </li>
+
   </ol>
 </details>
   
@@ -99,7 +108,7 @@ Once the HTML page was viewable from the EC2 instance via a browser, an Amazon M
 
 ### Domain Registration
 
-Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was registered using Route53. Certificates were created using AWS Certificate Manager for domains `cotiss-anon-feedback.com` and `www.cotiss-anon-feedback.com`. All traffic to the domain was redirected to the Load Balancer, which would balance inbound traffic to the two instances.
+Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was registered using Amazon Route 53. Certificates were created using AWS Certificate Manager for domains `cotiss-anon-feedback.com` and `www.cotiss-anon-feedback.com`. All traffic to the domain was redirected to the Load Balancer, which would balance inbound traffic to the two instances.
 
 ## Second Iteration
 
@@ -116,3 +125,23 @@ Firstly, a Lambda function was created that retrieved an item from the DynamoDB 
 Secondly, a Lambda function was created that stored the feedback text, from the text field on the website to the Lambda table. Again, this was achieved through IAM roles and Python. A POST REST API was created using API Gateway that invoked the Lambda function when called. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API would be called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
 
 ### Web Hosting Platform-as-a-Service
+
+This step saw the retirement of the EC2 instances, the auto scaling groups, and the Load Balancers. An Amazon S3 bucket was created which contained the files for the website, and hosted the simple site along with AWS CloudFront. Using Amazon Route 53, all traffic to the domain previously registered `cotiss-anon-feedback.com` was routed to the CloudFront distribution. Now, there are no longer servers, web server software, load balancing to manage.
+
+## Final Iteration
+
+### Amplify Hosting
+
+The final product saw the retirement of the S3 bucket and CloudFront distribution, and instead a GitHub repo and AWS Amplify App. Using Amplify Hosting, the Amplify App connects to this GitHub repository where it gets the files to host. With each GitHub repo update (update to the website), Amplify will automatically update those changes in the background. A CloudFront distribution is automatically created with the Amplify app.
+
+### Route 53
+
+Using Amazon Route 53, all traffic to the domain previously registered `cotiss-anon-feedback.com` was routed to the CloudFront distribution. Now, there is no S3 bucket to manage everytime an update needs to be made live. All traffic going to the http port will be redirected to https, providing a layer of security.
+
+### Micro Services and APIs
+
+The architecture: Website calls API Gateway which executes a Lambda Function which reads/updates data in the DynamoDB table. With the help of JavaScript, the HTML site was transformed into a dynamic site. 
+<br><br>
+A Lambda function that retrieved an item from the DynamoDB table is called by a GET REST API created using API Gateway. Using JavaScript, the website calls the API with every reload of the page and display the retrieved piece of feedback on the website.
+<br><br>
+A Lambda function that stores the feedback text, from the text field on the website to the Lambda table is called by a POST REST API created using API Gateway. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API is called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
