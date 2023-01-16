@@ -79,10 +79,14 @@ Created a simple HTML/CSS page that met the requirements of the project - text f
 <br>
 For web hosting, an Amazon EC2 virtual machine (VM) was deployed. The operating system used for the VM was Amazon Linux AMI, SSD Volume Type; the instance type of this VM was t2 micro. A security group was configured to allow two types of inbound traffic - SSH (to log in to the virtual computer) and HTTP (to view the webpage from a browser).
 
-<br>
+<br><br>
 
 When the EC2 instance was set up, an apache web server was installed onto the VM and the HTML file was linked to be served by the apache web server.
 
 ### Auto Scaling
 
 Once the HTML page was viewable from the EC2 instance via a browser, an Amazon Machine Image was created from the virtual machine. This was then put into an auto scaling group so that one virtual machine always exists. There were a minimum of 1 virtual machine running at all times, a maximum of 2, and 2 running at a single time preferred, and each one in a different availability zone. An Elastic Load Balancer was put in front of the virtual machines to load balance between two availability zones. This modelled an active/active multi-region architecture.
+
+## Domain Registration
+
+Once, auto scaling was set up, a domain (www.cotiss-anon-feedback.com) was registered using Route53. Certificates were created using AWS Certificate Manager for domains cotiss-anon-feedback.com and www.cotiss-anon-feedback.com. All traffic to the domain was redirected to the Load Balancer, which would balance inbound traffic to the two instances.
