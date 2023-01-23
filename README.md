@@ -39,8 +39,8 @@
       <a href="#final-iteration">Final Iteration</a>
       <ul>
         <li><a href="#amplify-hosting">Amplify Hosting</a></li>
-        <li><a href="#micro-services-and-apis">Micro Services and APIs</a></li>
-        <li><a href="#web-hosting">Web Hosting Platform-as-a-Service</a></li>
+        <li><a href="#micro-services-and-apis-2">Micro Services and APIs</a></li>
+        <li><a href="#web-hosting-platform-as-a-service-2">Web Hosting Platform-as-a-Service</a></li>
       </ul>
     </li>
 
