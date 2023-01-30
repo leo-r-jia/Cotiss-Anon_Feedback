@@ -163,3 +163,11 @@ One of the next steps for this site is to set up dev, staging, and production br
   ![image](https://user-images.githubusercontent.com/105583042/215598013-22f9639b-ad86-46b6-b3c2-942d2aa639ee.png)
 
   Another one is to block or rate-limit pervasive bots, such as scrapers, scanners, and crawlers using AWS Web Application Firewall Bot Control. This prevents bots from consuming excess resources, skewing metrics, causing downtime, or performing other undesired activities.
+  
+  <b>3. Monitor app</b>
+  
+  Use CloudWatch to monitor the app 24/7. CloudWatch Synthetics can be used alongside Amplify Apps to monitor broken links, heartbeat checks, and testing different user flows in your app.
+
+ <b>4. Set up email notifications</b>
+  
+  Use Amazon SNS to send weekly summaries of feedback to a group of emails. This can be done with Lambda, where Lambda retrieves every item written to the DynamoDB table at the end of the week. This will relieve admins/management of constantly checking the DynamoDB table each week for new items.
