@@ -135,7 +135,7 @@ This step saw the retirement of the EC2 instances, the auto scaling groups, and 
 
 ### Amplify Hosting
 
-The final product saw the retirement of the S3 bucket and CloudFront distribution, and instead a GitHub repo and AWS Amplify App. Using Amplify Hosting, the Amplify App connects to this GitHub repository where it gets the files to host. With each GitHub repo update (update to the website), Amplify will automatically update those changes in the background. A CloudFront distribution is automatically created with the Amplify app.
+The final product saw the retirement of the S3 bucket and CloudFront distribution, and instead a GitHub repo and AWS Amplify App. Using Amplify Hosting, the Amplify App connects to this GitHub repository where it gets the files to host. With each GitHub repo update (update to the website), Amplify will automatically update those changes in the background - acting as a fully managed CI/CD and hosting service. A CloudFront distribution is automatically created with the Amplify app, and managed entirely by Amplify.
 
 ### Route 53
 
@@ -148,3 +148,9 @@ The architecture: Website calls API Gateway which executes a Lambda Function whi
 A Lambda function that retrieved an item from the DynamoDB table is called by a GET REST API created using API Gateway. Using JavaScript, the website calls the API with every reload of the page and display the retrieved piece of feedback on the website.
 <br><br>
 A Lambda function that stores the feedback text, from the text field on the website to the Lambda table is called by a POST REST API created using API Gateway. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API is called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
+
+### Next Steps
+
+![image](https://user-images.githubusercontent.com/105583042/215596478-a5cc9518-546c-44f6-9551-636fe59de1e5.png)
+
+One of the next steps for this site is to set up dev, staging, and production branches and connect those branches to Amplify Hosting so frontend devs work on features in parallel, without stepping on any other frontend dev's work or the prod site. 
