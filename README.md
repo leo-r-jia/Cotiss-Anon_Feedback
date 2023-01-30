@@ -41,6 +41,7 @@
         <li><a href="#amplify-hosting">Amplify Hosting</a></li>
         <li><a href="#micro-services-and-apis-2">Micro Services and APIs</a></li>
         <li><a href="#web-hosting-platform-as-a-service-2">Web Hosting Platform-as-a-Service</a></li>
+        <li><a href="#next-steps"></a></li>
       </ul>
     </li>
 
@@ -151,6 +152,14 @@ A Lambda function that stores the feedback text, from the text field on the webs
 
 ### Next Steps
 
+<b>1. Set up dev, staging, and production environments
+
 ![image](https://user-images.githubusercontent.com/105583042/215596478-a5cc9518-546c-44f6-9551-636fe59de1e5.png)
 
 One of the next steps for this site is to set up dev, staging, and production branches and connect those branches to Amplify Hosting so frontend devs work on features in parallel, without stepping on any other frontend dev's work or the prod site. 
+  
+  <b>2. Bot control</b>
+  
+  ![image](https://user-images.githubusercontent.com/105583042/215598013-22f9639b-ad86-46b6-b3c2-942d2aa639ee.png)
+
+  Another one is to block or rate-limit pervasive bots, such as scrapers, scanners, and crawlers using AWS Web Application Firewall Bot Control. This prevents bots from consuming excess resources, skewing metrics, causing downtime, or performing other undesired activities.
