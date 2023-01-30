@@ -95,6 +95,7 @@ Created a simple HTML/CSS page that met the requirements of the project - text f
 <br>
 
 ![image](https://user-images.githubusercontent.com/105583042/212622208-f0da670d-8e9f-4dd6-9263-7d9b5fa2c525.png)
+(Current AWS Architecture)
 
 <br>
 For web hosting, an Amazon EC2 virtual machine (VM) was deployed. The operating system used for the VM was Amazon Linux AMI, SSD Volume Type; the instance type of this VM was t2 micro. A security group was configured to allow two types of inbound traffic - SSH (to log in to the virtual computer) and HTTP (to view the webpage from a browser).
@@ -151,6 +152,9 @@ A Lambda function that retrieved an item from the DynamoDB table is called by a 
 A Lambda function that stores the feedback text, from the text field on the website to the Lambda table is called by a POST REST API created using API Gateway. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API is called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
 
 ## Next Steps
+
+![image](https://user-images.githubusercontent.com/105583042/215611562-dd6270a0-aedb-4b7a-9711-af41561a8930.png)
+(Proposed Architecture)
 
 <b>1. Set up dev, staging, and production environments</b>
 
