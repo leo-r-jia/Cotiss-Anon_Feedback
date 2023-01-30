@@ -41,10 +41,11 @@
         <li><a href="#amplify-hosting">Amplify Hosting</a></li>
         <li><a href="#micro-services-and-apis-final">Micro Services and APIs</a></li>
         <li><a href="#web-hosting-platform-as-a-service-final">Web Hosting Platform-as-a-Service</a></li>
-        <li><a href="#next-steps">Next Steps</a></li>
       </ul>
     </li>
-
+    <li>
+      <a href="#next-steps">Next Steps</a>
+    </li>
   </ol>
 </details>
   
@@ -149,7 +150,7 @@ A Lambda function that retrieved an item from the DynamoDB table is called by a 
 <br><br>
 A Lambda function that stores the feedback text, from the text field on the website to the Lambda table is called by a POST REST API created using API Gateway. Again using JavaScript, with each click of the submit button (as long as the text field was not empty), the POST API is called to store the feedback text in the DynamoDB table as well as the date and time the feedback was submitted.
 
-### Next Steps
+## Next Steps
 
 <b>1. Set up dev, staging, and production environments</b>
 
