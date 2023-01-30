@@ -131,7 +131,7 @@ This step saw the retirement of the EC2 instances, the auto scaling groups, and 
 
 ## Final Iteration
 
-![image](https://user-images.githubusercontent.com/105583042/215600054-4b2541ca-85e2-41b9-9357-2a2c95b7cfaa.png)
+![image](https://user-images.githubusercontent.com/105583042/215602143-d974c856-ef0e-4fc7-866b-c77cd3f88b12.png)
 
 ### Amplify Hosting
 
