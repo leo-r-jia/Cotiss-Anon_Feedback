@@ -152,7 +152,7 @@ A Lambda function that stores the feedback text, from the text field on the webs
 
 ### Next Steps
 
-<b>1. Set up dev, staging, and production environments
+<b>1. Set up dev, staging, and production environments</b>
 
 ![image](https://user-images.githubusercontent.com/105583042/215596478-a5cc9518-546c-44f6-9551-636fe59de1e5.png)
 
