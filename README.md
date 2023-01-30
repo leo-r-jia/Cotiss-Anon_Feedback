@@ -130,6 +130,9 @@ This step saw the retirement of the EC2 instances, the auto scaling groups, and 
 
 ## Final Iteration
 
+![image](https://user-images.githubusercontent.com/105583042/215595835-1f5665c1-2181-46dd-b92d-c2e815c0c306.png)
+
+
 ### Amplify Hosting
 
 The final product saw the retirement of the S3 bucket and CloudFront distribution, and instead a GitHub repo and AWS Amplify App. Using Amplify Hosting, the Amplify App connects to this GitHub repository where it gets the files to host. With each GitHub repo update (update to the website), Amplify will automatically update those changes in the background. A CloudFront distribution is automatically created with the Amplify app.
