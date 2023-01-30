@@ -139,7 +139,7 @@ The final product saw the retirement of the S3 bucket and CloudFront distributio
 
 ### Route 53 Final
 
-Using Amazon Route 53, all traffic to the domain previously registered `cotiss-anon-feedback.com` was routed to the CloudFront distribution. Now, there is no S3 bucket to manage everytime an update needs to be made live. All traffic going to the http port will be redirected to https, providing a layer of security.
+Using Amazon Route 53, all traffic to the domain previously registered `cotiss-anon-feedback.com` is now routed to the Amplify app. All traffic going to the http port will be redirected to https, providing a layer of security. An Amazon issued certificate is issued for `cotiss-anon-feedback.com` and `www.cotiss-anon-feedback.com` using AWS Certificate Manager.
 
 ### Micro Services and APIs Final
 
