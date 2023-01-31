@@ -40,8 +40,8 @@
       <a href="#final-iteration">Final Iteration</a>
       <ul>
         <li><a href="#amplify-hosting">Amplify Hosting</a></li>
+        <li><a href="#route-53">Route 53</a></li>
         <li><a href="#micro-services-and-apis-final">Micro Services and APIs</a></li>
-        <li><a href="#web-hosting-platform-as-a-service-final">Web Hosting Platform-as-a-Service</a></li>
       </ul>
     </li>
     <li>
@@ -140,7 +140,7 @@ This step saw the retirement of the EC2 instances, the auto scaling groups, and 
 
 The final product saw the retirement of the S3 bucket and CloudFront distribution, and instead a GitHub repo and AWS Amplify App. Using Amplify Hosting, the Amplify App connects to this GitHub repository where it gets the files to host. With each GitHub repo update (update to the website), Amplify will automatically update those changes in the background - acting as a fully managed CI/CD and hosting service. A CloudFront distribution is automatically created with the Amplify app, and managed entirely by Amplify.
 
-### Route 53 Final
+### Route 53
 
 Using Amazon Route 53, all traffic to the domain previously registered `cotiss-anon-feedback.com` is now routed to the Amplify app. All traffic going to the http port will be redirected to https, providing a layer of security. An Amazon issued certificate is issued for `cotiss-anon-feedback.com` and `www.cotiss-anon-feedback.com` using AWS Certificate Manager.
 
