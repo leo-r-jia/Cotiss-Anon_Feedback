@@ -53,7 +53,9 @@
 <style>
     body {
         padding: 0;
-        margin: 5rem 0 0 0;
+        width: 99.5%;
+        min-width: none;
+        background-color: #f8fafc;
     }
 
     h1 {
@@ -73,31 +75,61 @@
         padding: 0;
         margin: 0;
         color: #374151;
-        height: 80vh;
-        background-image: url(https://www.cotiss.com/hubfs/raw_assets/public/@marketplace/kalungi_com/Atlas_Pro_SaaS_Website_Theme/images/Hero-Background.svg) !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
+        height: 100%;
+        width: 100%;
+        min-width: none;
     }
 
-    q {
+    .sub-container {
+        width: 87.5%;
+        min-width: 13rem;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        border-radius: 0.8rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    .sub-sub-container {
+        margin-top: 1rem;
+        width: 97.5%;
+        min-width: 15rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .large-container {
+        width: 35%;
+        min-width: 24.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: start;
+        gap: 1rem;
+    }
+
+    q,
+    p {
         font-family: DM Sans, sans-serif;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
     }
 
-    .quote {
-        display: flex;
-        justify-content: center;
+    p {
+        margin: 0;
+        padding: 0 0 0.5rem 0;
     }
 
     textarea {
         cursor: text;
-        width: 20vw;
-        min-width: 15rem;
+        width: 97.5%;
+        min-width: 12rem;
         resize: none;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: DM Sans, sans-serif;
+        margin: 0;
         padding: 0.5rem;
         border: solid 1px #f1f4f9;
         outline-color: #f1f4f9;
@@ -115,6 +147,28 @@
         transition: all 0.3s ease;
     }
 
+    .cotiss-icon {
+        border-radius: 0.5rem;
+        background-color: #01033b;
+        min-width: 3rem;
+        max-width: 3rem;
+        min-height: 3rem;
+        max-height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.15rem;
+    }
+
+    .cotiss-icon img {
+        width: 2rem;
+    }
+
+    .anon-icon-img {
+        width: 3rem;
+        border-radius: 0.5rem;
+    }
+
     button {
         background-color: #05ca86;
         border: 1px solid #05ca86;
@@ -125,16 +179,14 @@
         font-family: DM Sans, sans-serif;
         font-size: .75rem;
         font-weight: 700;
-        height: auto;
+        height: 2.25rem;
+        min-width: 5rem;
         letter-spacing: .03em;
-        line-height: 1.1;
-        margin-top: 0.5remrem;
         padding: 0.55rem 1rem 0.5rem 1rem;
         position: relative;
         text-align: center;
         text-decoration: none;
         white-space: normal;
-        width: auto;
         word-break: break-word;
     }
 
@@ -147,10 +199,8 @@
         transition: all 0.3s ease;
     }
 
-    .quote {
-        width: 40vw;
-        min-width: 15rem;
-        max-width: 40rem;
+    .break {
+        padding: 1rem;
     }
 
     .error {
@@ -159,7 +209,7 @@
         color: #cc0c0c;
         margin: 0.5rem 0 0.8rem;
         border-radius: 0.1rem;
-        text-align: center;
+        text-align: left;
         width: 22rem;
         text-decoration: none;
     }
@@ -167,14 +217,28 @@
 
 <body>
     <div class="container">
-        <div class="quote">
-            <q id="quote"></q>
+        <div class="large-container">
+            <div class="cotiss-icon">
+                <img class="icon-img" src="https://www.cotiss.com/hubfs/Fill%2013.svg" alt="" srcset="">
+            </div>
+            <div class="sub-container t-container">
+                <p>Please enter your honest feedback. Here is something a colleague said: </p>
+                <q id="quote"></q>
+            </div>
         </div>
-        <br>
-        <textarea id="feedback" cols="30" rows="10" placeholder="Enter your feedback here" class="input"></textarea>
-        <p id="error" class="error">&nbsp;</p>
-
-        <button type="submit" onclick="submitData()">Submit</button>
+        <div class="break"></div>
+        <div class="large-container">
+            <div class="sub-container">
+                <textarea id="feedback" cols="30" rows="10" placeholder="Enter your feedback here"
+                    class="input"></textarea>
+                <div class="sub-sub-container">
+                    <p id="error" class="error">&nbsp;</p>
+                    <button type="submit" onclick="submitData()">Submit</button>
+                </div>
+            </div>
+            <img class="anon-icon-img"
+                src="https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg" alt="">
+        </div>
     </div>
 </body>
 
