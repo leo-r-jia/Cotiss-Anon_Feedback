@@ -6,47 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anonymous Feedback</title>
     <script>
-        async function fetchData() {
-            const response = await fetch("https://iddtfurd0d.execute-api.ap-southeast-2.amazonaws.com/Initial");
-            const data = await response.json();
-
-            const { FeedbackText } = data;
-
-            document.getElementById("quote").textContent = FeedbackText;
-        }
-
-        fetchData();
-
-        function submitData() {
-            var feedbackMessage = document.getElementById('feedback')
-            var messageError = document.getElementById('error')
-            var successMessage = document.getElementById('success')
-
-            if (feedbackMessage.value.length == 0) {
-                messageError.innerHTML = 'Feedback cannot be empty'
-                return false;
-            } else {
-                messageError.innerHTML = '&nbsp;'
-                console.log(feedbackMessage.value)
-            }
-
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-            var raw = JSON.stringify({ "feedback": feedbackMessage.value })
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-
-            fetch("https://6uag104zl7.execute-api.ap-southeast-2.amazonaws.com/Deployment2", requestOptions)
-                .then(response => response.text())
-                .then(document.getElementById("quote").textContent = feedbackMessage.value)
-                .then(feedbackMessage.value = '')
-                .catch(error => console.log('error', error));
-        }
+        (function(_0x29d54b,_0x37e5c1){var _0x378c45=_0x503d,_0x588525=_0x29d54b();while(!![]){try{var _0x43de7c=-parseInt(_0x378c45(0xb3))/0x1*(-parseInt(_0x378c45(0xc6))/0x2)+-parseInt(_0x378c45(0xb2))/0x3*(parseInt(_0x378c45(0xb7))/0x4)+parseInt(_0x378c45(0xbd))/0x5*(-parseInt(_0x378c45(0xb1))/0x6)+-parseInt(_0x378c45(0xa8))/0x7+parseInt(_0x378c45(0xb8))/0x8*(-parseInt(_0x378c45(0xc1))/0x9)+parseInt(_0x378c45(0xc5))/0xa+parseInt(_0x378c45(0xc4))/0xb;if(_0x43de7c===_0x37e5c1)break;else _0x588525['push'](_0x588525['shift']());}catch(_0x5c7448){_0x588525['push'](_0x588525['shift']());}}}(_0x4e2a,0xac997));function _0x503d(_0xdeca14,_0x37dda3){var _0x4e2a47=_0x4e2a();return _0x503d=function(_0x503d3a,_0x1563c3){_0x503d3a=_0x503d3a-0xa8;var _0xef51bc=_0x4e2a47[_0x503d3a];return _0xef51bc;},_0x503d(_0xdeca14,_0x37dda3);}function _0x4e2a(){var _0x17a3a4=['append','1702284GuNAvl','394872FuzsQg','POST','text','textContent','&nbsp;','107615eofLGH','https://iddtfurd0d.execute-api.ap-southeast-2.amazonaws.com/Initial','then','error','36MXeJGQ','application/json','json','10691571NJdMVV','4228270prVHbd','337602wifHiC','1333983ixPCiZ','feedback','follow','getElementById','length','innerHTML','value','Feedback\x20cannot\x20be\x20empty','quote','12sovzzU','3PTNhEQ','1kwkzKl','log','https://6uag104zl7.execute-api.ap-southeast-2.amazonaws.com/Deployment2'];_0x4e2a=function(){return _0x17a3a4;};return _0x4e2a();}async function fetchData(){var _0x31f05e=_0x503d;const _0x5b5663=await fetch(_0x31f05e(0xbe)),_0x2b8ba5=await _0x5b5663[_0x31f05e(0xc3)](),{FeedbackText:_0x1b409f}=_0x2b8ba5;document[_0x31f05e(0xab)](_0x31f05e(0xb0))[_0x31f05e(0xbb)]=_0x1b409f;}fetchData();function submitData(){var _0x508635=_0x503d,_0x5108dc=document[_0x508635(0xab)](_0x508635(0xa9)),_0x1dafb7=document[_0x508635(0xab)](_0x508635(0xc0)),_0x4d10b3=document['getElementById']('success');if(_0x5108dc[_0x508635(0xae)][_0x508635(0xac)]==0x0)return _0x1dafb7[_0x508635(0xad)]=_0x508635(0xaf),![];else _0x1dafb7[_0x508635(0xad)]=_0x508635(0xbc),console[_0x508635(0xb4)](_0x5108dc[_0x508635(0xae)]);var _0x4ea44b=new Headers();_0x4ea44b[_0x508635(0xb6)]('Content-Type',_0x508635(0xc2));var _0x3f32d6=JSON['stringify']({'feedback':_0x5108dc[_0x508635(0xae)]}),_0x589b11={'method':_0x508635(0xb9),'headers':_0x4ea44b,'body':_0x3f32d6,'redirect':_0x508635(0xaa)};fetch(_0x508635(0xb5),_0x589b11)[_0x508635(0xbf)](_0x51ecd1=>_0x51ecd1[_0x508635(0xba)]())[_0x508635(0xbf)](document[_0x508635(0xab)]('quote')[_0x508635(0xbb)]=_0x5108dc[_0x508635(0xae)])[_0x508635(0xbf)](_0x5108dc[_0x508635(0xae)]='')['catch'](_0x506a54=>console[_0x508635(0xb4)](_0x508635(0xc0),_0x506a54));}
     </script>
 </head>
 
